@@ -19,7 +19,7 @@
   "scripts": {
     "start": "BROWSER=none craco start",
     "build": "craco build",
-    "test": "craco test --watchAll",
+    "test": "rm -rf src/__snapshots__ && craco test --watchAll",
     "eject": "react-scripts eject",
     "format": "prettier --write ./src/",
     "storybook": "BROWSER=none start-storybook -p 6006 -s public",

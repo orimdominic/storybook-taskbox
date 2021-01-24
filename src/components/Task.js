@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-Task.propTypes ={
+Task.propTypes = {
   /** Composition of the task */
   task: PropTypes.shape({
     /** Unique identifier of the task */
@@ -9,13 +9,13 @@ Task.propTypes ={
     /** Title of the task */
     title: PropTypes.string.isRequired,
     /** Current state of the task */
-    state: PropTypes.string.isRequired
+    state: PropTypes.string.isRequired,
   }),
-      /** Event to change task to ARCHIVED */
-      onArchiveTask:PropTypes.func,
-        /** Event to change task to PINNED */
-        onPinTask:PropTypes.func,
-}
+  /** Event to change task to ARCHIVED */
+  onArchiveTask: PropTypes.func,
+  /** Event to change task to PINNED */
+  onPinTask: PropTypes.func,
+};
 
 export default function Task({
   task: { id, title, state },
@@ -31,9 +31,8 @@ export default function Task({
           disabled={true}
           name="checked"
         />
+        <span className="checkbox-custom" onClick={() => onArchiveTask(id)} />
       </label>
-      <input type="text" value={title} readOnly />
-      <span className="checkbx-custom" onClick={() => onArchiveTask(id)}></span>
       <div className="title">
         <input
           type="text"
@@ -42,8 +41,10 @@ export default function Task({
           placeholder="Input title"
         />
       </div>
-      <div className="actions" onClick={(e) => e.stopPropagation()}>
+
+      <div className="actions" onClick={(event) => event.stopPropagation()}>
         {state !== "TASK_ARCHIVED" && (
+          // eslint-disable-next-line jsx-a11y/anchor-is-valid
           <a onClick={() => onPinTask(id)}>
             <span className={`icon-star`} />
           </a>
