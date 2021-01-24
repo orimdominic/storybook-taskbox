@@ -53,6 +53,7 @@
     "@storybook/node-logger": "^6.1.15",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "6.1.15",
+    "chromatic": "^5.6.1",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
     "react-test-renderer": "^17.0.1"
