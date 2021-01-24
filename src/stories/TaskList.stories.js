@@ -1,5 +1,5 @@
 import React from "react";
-import {PureTaskList} from "../components/TaskList";
+import { PureTaskList } from "../components/TaskList";
 import * as TaskStories from "./Task.stories";
 
 export default {
