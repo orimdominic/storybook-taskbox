@@ -1,14 +1,14 @@
 import React from "react";
-import TaskList from "../components/TaskList";
+import {PureTaskList} from "../components/TaskList";
 import * as TaskStories from "./Task.stories";
 
 export default {
-  component: TaskList,
+  component: PureTaskList,
   title: "TaskList",
   decorators: [(story) => <div style={{ padding: "3rem" }}>{story()}</div>],
 };
 // TODO: Combine these two to curryables
-const Template = (args) => <TaskList {...args} />;
+const Template = (args) => <PureTaskList {...args} />;
 const bindToTemplate = (Template) => Template.bind({});
 
 export const Default = bindToTemplate(Template);
