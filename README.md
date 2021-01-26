@@ -1,6 +1,6 @@
 # storybook-taskbox
 
-Used to learn [Storybook]() with [React](). Includes [tailwindcss]() configuration (instructions)
+Used to learn [Storybook](https://storybook.js.org/) with [React](https://reactjs.org/). Includes [tailwindcss](https://tailwindcss.com) configuration (instructions)
 
 ## Getting Started with Create React App
 
@@ -11,10 +11,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. Create the app `create-react-app app-name`
 2. [Tailwind installation for create-react-app](https://tailwindcss.com/docs/guides/create-react-app)
-  - Install tailwindcss essentials `yarn add tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9 --offline`
-  - Install `craco` `yarn add @craco/craco --offline`
-  - Initialise `tailwindcss` config `npx tailwind init`
-  - Initialise `craco` config `touch craco.config.js`
+  - Install tailwindcss essentials: `tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9`
+  - Install craco` @craco/craco`
+  - Initialise tailwindcss config `npx tailwind init`
+  - Initialise craco config `touch craco.config.js`
   - Copy and paste this in `craco.config.js`
     ```javascript
     module.exports = {
@@ -70,16 +70,20 @@ module.exports = {
   },
 };
 ```
+6. Import `src/index.css` into `.storybook/preview.js`
 
-## For create-react-app/strybook tests
+
+## For create-react-app/storybook tests
 
 [Snapshot testing](https://www.learnstorybook.com/intro-to-storybook/react/en/simple-component/)
 
 1. Install as devDependencies ` @storybook/addon-storyshots` and `react-test-renderer`
-2. Create a `src/storybook.test.js` file
-3. Copy and paste into `src/storybook.test.js`:
+2. Create a `src/__tests__/storybook.test.js` file
+3. Copy and paste into `src/__tests__/storybook.test.js` :
 
 ```javascript
 import initStoryshots from '@storybook/addon-storyshots';
 initStoryshots();
 ```
+
+**And you're up and running. Best!**
